@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prabhash Kumar Singh | Software Engineer & Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Prabhash Kumar Singh — Aspiring Software Engineer specializing in Java, Python, React, Spring Boot, and Blockchain. B.Tech CSE at Chandigarh University. Published researcher & hackathon finalist." />
+  <meta property="og:title" content="Prabhash Kumar Singh | Software Engineer" />
+  <meta property="og:description" content="Aspiring Software Engineer. Full Stack Projects. Published Researcher. Open to opportunities." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- Loading Screen -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-ring"></div>
+    <div class="loader-ring"></div>
+    <div class="loader-text">
+      <span class="mono">Initializing<span class="dots">...</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <span class="logo-bracket">&lt;</span>
+    <span class="logo-name">PKS</span>
+    <span class="logo-bracket">/&gt;</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#hero" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#experience" class="nav-link">Experience</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta" id="hireMeBtn">Hire Me</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-grid-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Available for opportunities</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="hero-greeting">Hey, I'm</span>
+      <span class="hero-name glitch" data-text="Prabhash Kumar Singh">Prabhash Kumar Singh</span>
+    </h1>
+
+    <div class="hero-roles">
+      <span class="role-static">I build </span>
+      <span class="role-dynamic" id="roleText"></span>
+      <span class="role-cursor">|</span>
+    </div>
+
+    <p class="hero-desc">
+      Aspiring <span class="highlight">Software Engineer</span> with a strong foundation in Java, Python, and full-stack development.
+      Published researcher at <span class="highlight">Springer ICICC-2026</span> &amp; Top 10 hackathon finalist.
+      Currently pursuing B.Tech CSE at <span class="highlight">Chandigarh University</span>.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">
+        <span>View Projects</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-outline">
+        <span>Get in Touch</span>
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number" data-target="3">0</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number" data-target="1">0</div>
+        <div class="stat-label">Research Paper</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number" data-target="200">0</div>
+        <div class="stat-label">Hackathon Rank</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="profile-3d-wrapper">
+      <div class="profile-orb">
+        <div class="profile-orb-inner">
+          <img
+            src="profile.jpg"
+            alt="Prabhash Kumar Singh"
+            class="profile-img"
+            onerror="this.src='https://avatars.githubusercontent.com/u/171262974?v=4'"
+          />
+        </div>
+        <div class="orb-ring ring-1"></div>
+        <div class="orb-ring ring-2"></div>
+        <div class="orb-ring ring-3"></div>
+      </div>
+
+      <div class="floating-badges">
+        <div class="float-badge badge-tl">
+          <span>☕</span> Java
+        </div>
+        <div class="float-badge badge-tr">
+          <span>⛓️</span> Blockchain
+        </div>
+        <div class="float-badge badge-bl">
+          <span>⚛️</span> React
+        </div>
+        <div class="float-badge badge-br">
+          <span>🌱</span> Spring Boot
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ============ ABOUT SECTION ============ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">// about me</div>
+      <h2 class="section-title">Who I Am</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-intro">
+          I'm an <span class="highlight">Aspiring Software Engineer</span> with a strong foundation in Java, Python, and SQL, and hands-on experience in backend development, object-oriented design, and database management.
+        </p>
+        <p>
+          Skilled at building efficient, scalable applications and REST APIs, with practical exposure to full-stack and <strong>blockchain-based projects</strong> using Solidity, Next.js, and serverless APIs.
+        </p>
+        <p>
+          Strong understanding of data structures, algorithms, and distributed systems. I have a keen interest in writing clean, maintainable code and solving real-world engineering problems. 
+          Recently published a research paper at <strong>Springer ICICC-2026</strong> on Blockchain-Powered Voting Systems.
+        </p>
+
+        <div class="achievement-pills">
+          <div class="pill">🏆 Top 10 — 200+ Participant Hackathon</div>
+          <div class="pill">📄 Published — Springer ICICC-2026</div>
+          <div class="pill">🎓 B.Tech CSE — Chandigarh University</div>
+          <div class="pill">☁️ AWS Certified</div>
+        </div>
+
+        <div class="about-links">
+          <a href="https://github.com/Prabhashsingh17" target="_blank" rel="noopener" class="social-link github-link" id="githubProfileBtn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/prabhash-kumar-singh-47b883315/" target="_blank" rel="noopener" class="social-link linkedin-link" id="linkedinProfileBtn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:Prabhashrai17@gmail.com" class="social-link email-link" id="emailBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email Me
+          </a>
+        </div>
+      </div>
+
+      <div class="about-card-3d" id="aboutCard">
+        <div class="card-3d-inner">
+          <div class="about-info-card">
+            <div class="info-header">
+              <div class="info-avatar">
+                <img src="profile.jpg" alt="Prabhash Kumar Singh" onerror="this.src='https://avatars.githubusercontent.com/u/171262974?v=4'" />
+              </div>
+              <div>
+                <div class="info-name">Prabhash Kumar Singh</div>
+                <div class="info-title">Software Engineer · Full Stack</div>
+              </div>
+            </div>
+            <div class="info-items">
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <span>Mohali, Punjab, India</span>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">🎓</span>
+                <span>B.Tech CSE — Chandigarh University</span>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📧</span>
+                <span>Prabhashrai17@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📱</span>
+                <span>+91-9354999201</span>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">💼</span>
+                <span>Open to Full-Time Roles</span>
+              </div>
+            </div>
+            <div class="info-langs">
+              <div class="lang-bar">
+                <span>Java</span>
+                <div class="bar-track"><div class="bar-fill" style="--w:88%"></div></div>
+              </div>
+              <div class="lang-bar">
+                <span>JavaScript/React</span>
+                <div class="bar-track"><div class="bar-fill" style="--w:85%"></div></div>
+              </div>
+              <div class="lang-bar">
+                <span>Python</span>
+                <div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div>
+              </div>
+              <div class="lang-bar">
+                <span>SQL / MongoDB</span>
+                <div class="bar-track"><div class="bar-fill" style="--w:82%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS SECTION ============ -->
+<section class="section skills" id="skills">
+  <div class="skills-bg-canvas">
+    <canvas id="skillsCanvas"></canvas>
+  </div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">// tech stack</div>
+      <h2 class="section-title">Skills & Tools</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-category">
+        <div class="category-label">Languages</div>
+        <div class="skill-chips">
+          <div class="skill-chip"><div class="chip-icon">☕</div><span>Java</span></div>
+          <div class="skill-chip"><div class="chip-icon">🐍</div><span>Python</span></div>
+          <div class="skill-chip"><div class="chip-icon">🟨</div><span>JavaScript</span></div>
+          <div class="skill-chip"><div class="chip-icon">🗄️</div><span>SQL</span></div>
+          <div class="skill-chip"><div class="chip-icon">🌐</div><span>HTML/CSS</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="category-label">Frameworks & Libraries</div>
+        <div class="skill-chips">
+          <div class="skill-chip"><div class="chip-icon">⚛️</div><span>React</span></div>
+          <div class="skill-chip"><div class="chip-icon">🌱</div><span>Spring Boot</span></div>
+          <div class="skill-chip"><div class="chip-icon">🚀</div><span>Express</span></div>
+          <div class="skill-chip"><div class="chip-icon">🟢</div><span>Node.js</span></div>
+          <div class="skill-chip"><div class="chip-icon">▲</div><span>Next.js</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="category-label">Databases & Cloud</div>
+        <div class="skill-chips">
+          <div class="skill-chip"><div class="chip-icon">🐬</div><span>MySQL</span></div>
+          <div class="skill-chip"><div class="chip-icon">🍃</div><span>MongoDB</span></div>
+          <div class="skill-chip"><div class="chip-icon">☁️</div><span>AWS</span></div>
+          <div class="skill-chip"><div class="chip-icon">▲</div><span>Vercel</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="category-label">Tools & Blockchain</div>
+        <div class="skill-chips">
+          <div class="skill-chip"><div class="chip-icon">🐙</div><span>Git/GitHub</span></div>
+          <div class="skill-chip"><div class="chip-icon">🔵</div><span>VS Code</span></div>
+          <div class="skill-chip"><div class="chip-icon">📮</div><span>Postman</span></div>
+          <div class="skill-chip"><div class="chip-icon">⛓️</div><span>Solidity</span></div>
+          <div class="skill-chip"><div class="chip-icon">🔷</div><span>Ethereum</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="certs-section">
+      <div class="section-tag" style="margin-bottom:1.5rem">// certifications</div>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-body">
+            <div class="cert-title">AWS Cloud Technical Essentials</div>
+            <div class="cert-issuer">Amazon Web Services</div>
+          </div>
+          <div class="cert-badge">Certified</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🌐</div>
+          <div class="cert-body">
+            <div class="cert-title">Introduction to Networking & Computing</div>
+            <div class="cert-issuer">Microsoft</div>
+          </div>
+          <div class="cert-badge">Certified</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🗄️</div>
+          <div class="cert-body">
+            <div class="cert-title">SQL: A Practical Introduction for Querying Databases</div>
+            <div class="cert-issuer">IBM</div>
+          </div>
+          <div class="cert-badge">Certified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE SECTION ============ -->
+<section class="section experience" id="experience">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">// work & research</div>
+      <h2 class="section-title">Experience</h2>
+    </div>
+
+    <div class="timeline">
+      <!-- Work Experience -->
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-line"></div>
+        </div>
+        <div class="timeline-card" id="exp-metacrafter">
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Blockchain Developer Intern</div>
+              <div class="tl-company">Metacrafter Summer Training · Chandigarh University</div>
+            </div>
+            <div class="tl-date">May 2024 – Sept 2024</div>
+          </div>
+          <div class="tl-type-badge work-badge">Work Experience</div>
+          <ul class="tl-points">
+            <li>Gained hands-on experience with <strong>Solidity</strong> fundamentals for Ethereum smart contracts</li>
+            <li>Built beginner-level smart contracts and <strong>decentralized apps (DApps)</strong> using Solidity</li>
+            <li>Explored blockchain architecture principles, consensus mechanisms, and Web3 integration</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Solidity</span>
+            <span class="tag">Blockchain</span>
+            <span class="tag">Ethereum</span>
+            <span class="tag">DApps</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research -->
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="marker-dot research-dot"></div>
+        </div>
+        <div class="timeline-card" id="exp-research">
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Research Paper — Blockchain Powered Voting System</div>
+              <div class="tl-company">Springer 9th International Conference (ICICC-2026, India)</div>
+            </div>
+            <div class="tl-date">Published 2026</div>
+          </div>
+          <div class="tl-type-badge research-badge">Published Research</div>
+          <ul class="tl-points">
+            <li>Analyzed and designed a <strong>Blockchain-powered voting system</strong> using Ethereum and Solidity, focusing on transparency, immutability, and secure vote recording through smart contracts</li>
+            <li>Researched real-world challenges of traditional e-voting systems and demonstrated how <strong>decentralized blockchain architecture</strong> improves voter trust, data integrity, and fraud prevention</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Solidity</span>
+            <span class="tag">Remix IDE</span>
+            <span class="tag">Ethereum</span>
+            <span class="tag">Research</span>
+            <span class="tag">Springer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="marker-dot edu-dot"></div>
+        </div>
+        <div class="timeline-card" id="exp-edu">
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">B.Tech — Computer Science Engineering</div>
+              <div class="tl-company">Chandigarh University · Mohali, Punjab</div>
+            </div>
+            <div class="tl-date">2022 – 2026</div>
+          </div>
+          <div class="tl-type-badge edu-badge">Education</div>
+          <ul class="tl-points">
+            <li>Studying core CS fundamentals: Data Structures, Algorithms, OOP, Operating Systems, DBMS, Computer Networks</li>
+            <li><strong>Top 10 Teams</strong> out of 200+ participants in a 24-hour state-level hackathon</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">DSA</span>
+            <span class="tag">OOP</span>
+            <span class="tag">DBMS</span>
+            <span class="tag">Computer Networks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS SECTION ============ -->
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">// featured work</div>
+      <h2 class="section-title">Projects</h2>
+    </div>
+
+    <div class="projects-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+      <button class="filter-btn" data-filter="analytics">Analytics</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <!-- Project 1: MindMate -->
+      <div class="project-card featured-card" data-category="fullstack" id="proj-mindmate">
+        <div class="project-card-inner">
+          <div class="project-featured-badge">⭐ Featured</div>
+          <div class="project-header">
+            <div class="project-icon">🧠</div>
+            <div class="project-links">
+              <a href="https://github.com/Prabhashsingh17" target="_blank" rel="noopener" class="proj-link" title="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">MindMate – AI Mental Wellness</h3>
+          <p class="project-desc">Built and deployed a responsive AI-driven web application focused on mental wellness. Enables users to track mood, stress levels, and personal growth. Features journaling, guided breathing exercises, and AI-generated wellness insights.</p>
+          <div class="project-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">AI</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-lang"><span class="lang-dot" style="background:#61dafb"></span>React</span>
+            <a href="https://github.com/Prabhashsingh17" target="_blank" class="project-cta" rel="noopener">View Project →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Scalable Ecommerce -->
+      <div class="project-card featured-card" data-category="fullstack" id="proj-ecom">
+        <div class="project-card-inner">
+          <div class="project-featured-badge">⭐ Featured</div>
+          <div class="project-header">
+            <div class="project-icon">🛍️</div>
+            <div class="project-links">
+              <a href="https://github.com/Prabhashsingh17" target="_blank" rel="noopener" class="proj-link" title="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Scalable Ecommerce Platform</h3>
+          <p class="project-desc">Designed and developed a microservices-based e-commerce platform with seamless frontend–backend integration. Built secure and efficient REST APIs, optimized data flow, and improved UX through performance tuning and clean system design.</p>
+          <div class="project-tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">React.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Microservices</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-lang"><span class="lang-dot" style="background:#6db33f"></span>Java</span>
+            <a href="https://github.com/Prabhashsingh17" target="_blank" class="project-cta" rel="noopener">View Project →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: EcoYaan Checkout -->
+      <div class="project-card" data-category="fullstack" id="proj-ecoyaan">
+        <div class="project-card-inner">
+          <div class="project-header">
+            <div class="project-icon">🛒</div>
+            <div class="project-links">
+              <a href="https://github.com/Prabhashsingh17/ecoyaan-checkout-demo" target="_blank" rel="noopener" class="proj-link" title="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">EcoYaan – Checkout Flow</h3>
+          <p class="project-desc">A multi-step checkout experience (Cart → Address → Payment → Confirmation) for an eco-friendly products storefront. Implemented real-time cart updates, trust-building UI elements, and sustainable packaging messaging.</p>
+          <div class="project-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">TypeScript</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-lang"><span class="lang-dot" style="background:#3178C6"></span>TypeScript</span>
+            <a href="https://github.com/Prabhashsingh17/ecoyaan-checkout-demo" target="_blank" class="project-cta" rel="noopener">View Project →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Punjab Agro Analytics -->
+      <div class="project-card" data-category="analytics" id="proj-agro">
+        <div class="project-card-inner">
+          <div class="project-header">
+            <div class="project-icon">🌾</div>
+            <div class="project-links">
+              <a href="https://github.com/Prabhashsingh17/punjab-agro-analytics" target="_blank" rel="noopener" class="proj-link" title="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>
+              </a>
+              <a href="https://prabhashsingh17.github.io/punjab-agro-analytics/" target="_blank" rel="noopener" class="proj-link" title="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Punjab Agro Analytics</h3>
+          <p class="project-desc">Data Analytics & Business Analytics portfolio for Punjab Agro Centre, Gopalganj Bihar. Analyzes agricultural data to provide actionable business insights with interactive data visualizations.</p>
+          <div class="project-tags">
+            <span class="tag">Data Analytics</span>
+            <span class="tag">Business Analytics</span>
+            <span class="tag">HTML</span>
+            <span class="tag">Data Visualization</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-lang"><span class="lang-dot" style="background:#e34c26"></span>HTML</span>
+            <a href="https://prabhashsingh17.github.io/punjab-agro-analytics/" target="_blank" class="project-cta" rel="noopener">Live Demo →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Blockchain Voting (Research) -->
+      <div class="project-card" data-category="blockchain" id="proj-blockchain">
+        <div class="project-card-inner">
+          <div class="project-header">
+            <div class="project-icon">🗳️</div>
+            <div class="project-links">
+              <a href="https://github.com/Prabhashsingh17" target="_blank" rel="noopener" class="proj-link" title="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Blockchain Voting System</h3>
+          <p class="project-desc">Research project: designed a Blockchain-powered voting system using Ethereum and Solidity. Focuses on transparency, immutability, and fraud prevention. Published at Springer ICICC-2026 International Conference.</p>
+          <div class="project-tags">
+            <span class="tag">Solidity</span>
+            <span class="tag">Ethereum</span>
+            <span class="tag">Remix IDE</span>
+            <span class="tag">Research</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-lang"><span class="lang-dot" style="background:#a855f7"></span>Solidity</span>
+            <span class="research-pub-badge">📄 Published at Springer</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="projects-cta">
+      <a href="https://github.com/Prabhashsingh17" target="_blank" rel="noopener" class="btn btn-outline" id="viewAllRepos">
+        View All Repositories on GitHub
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
+<section class="section contact" id="contact">
+  <div class="contact-bg">
+    <canvas id="contactCanvas"></canvas>
+  </div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">// get in touch</div>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-subtitle">I'm currently open to full-time roles, internships and freelance projects. Let's build something amazing!</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card" id="contactCard">
+          <div class="contact-card-glow"></div>
+          <h3>Reach Out Directly</h3>
+          <div class="contact-links">
+            <a href="mailto:Prabhashrai17@gmail.com" class="contact-item" id="contactEmail">
+              <div class="contact-item-icon email-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value">Prabhashrai17@gmail.com</div>
+              </div>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/prabhash-kumar-singh-47b883315/" target="_blank" rel="noopener" class="contact-item" id="contactLinkedin">
+              <div class="contact-item-icon linkedin-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">LinkedIn</div>
+                <div class="contact-item-value">prabhash-kumar-singh</div>
+              </div>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <a href="https://github.com/Prabhashsingh17" target="_blank" rel="noopener" class="contact-item" id="contactGithub">
+              <div class="contact-item-icon github-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">GitHub</div>
+                <div class="contact-item-value">Prabhashsingh17</div>
+              </div>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="availability-badge">
+            <span class="avail-dot"></span>
+            <span>Open to full-time, internship &amp; freelance opportunities</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="nameInput">Your Name</label>
+          <input type="text" id="nameInput" name="name" placeholder="John Doe" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="emailInput">Email Address</label>
+          <input type="email" id="emailInput" name="email" placeholder="john@company.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="subjectInput">Subject</label>
+          <input type="text" id="subjectInput" name="subject" placeholder="Job Opportunity / Project Collaboration" />
+        </div>
+        <div class="form-group">
+          <label for="messageInput">Message</label>
+          <textarea id="messageInput" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn" id="submitContactForm">
+          <span class="btn-text">Send Message</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Prabhash Kumar Singh</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">Crafted with ❤️ and lots of ☕ · 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/Prabhashsingh17" target="_blank" rel="noopener" id="footerGithub">GitHub</a>
+        <a href="https://www.linkedin.com/in/prabhash-kumar-singh-47b883315/" target="_blank" rel="noopener" id="footerLinkedin">LinkedIn</a>
+        <a href="mailto:Prabhashrai17@gmail.com" id="footerEmail">Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span class="toast-msg" id="toastMsg">Message copied!</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
